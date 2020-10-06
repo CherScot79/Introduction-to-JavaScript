@@ -18,9 +18,8 @@ Do the following:
    HINT: no function required
 */
 const votingAge = 18;
-if(votingAge > 17)
-return 'true';
-
+if (votingAge >= 18)
+console.log('true');
 
 /*
 Task 1b - Values
@@ -144,7 +143,7 @@ function hungryDog(weight, age) {
     }
     return dogFood;
   }
-console.log(dogFeeder(15, 1));
+console.log(hungryDog(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -161,9 +160,50 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
-}
+function game(randomThrow){
+  let computerThrow = Math.floor(Math.random() * 3 + 1);
+      let result;
+  
+      console.log(computerThrow);
+  
+      if (randomThrow === "rock") {
+          if (computerThrow === 1) {
+              result = "Draw.";
+          }
+          else if (computerThrow === 2) {
+              result = "You Lost.";
+          }
+          else if (computerThrow === 3) {
+              result = "You Won!"
+          }
+      }
+      else if (randomThrow === "paper") {
+          if (computerThrow === 1) {
+              result = "You Won!";
+          }
+          else if (computerThrow === 2) {
+              result = "Draw.";
+          }
+          else if (computerThrow === 3) {
+              result = "You Lost."
+          }
+      }
+      else if (randomThrow === "scissors") {
+          if (computerThrow === 1) {
+              result = "You Lost.";
+          }
+          else if (computerThrow === 2) {
+              result = "You Won!";
+          }
+          else if (computerThrow === 3) {
+              result = "Draw."
+          }
+      }
+      return result;
+  }
+  
+  console.log(game("paper"));   
+
   
   
 
@@ -178,11 +218,13 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    let miles;
+    miles = kilometers * 0.621371;
+    return miles;
   }
 
-
+console.log(miles(4));
 
 //Task 5b - Feet to CM
 /*
@@ -192,10 +234,12 @@ Using the feet function below do the following:
   3. Return number of centimeters
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(){
+    let centimeters;
+    centimeters = feet * 30.48;
+    return centimeters;
   }
- 
+ console.log(feet(6));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -207,10 +251,14 @@ Using the annoyingSong function below do the following:
   2. At each iteration, it should return this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(){
+  for(i = 10; i > 0; i--){
+    console.log(i + " bottles of soda on the wall," + i + " bottles of soda, take one down pass it around " + (i -1) + " bottles of soda on the wall");
   }
+
+}
+annoyingSong(99);
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -228,10 +276,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(mark){
+  if (mark >= 90){
+    return 'A';
+  } else if (mark >= 80){
+    return 'B';
+  } else if (mark >= 70){
+    return 'C';
+  }else if(mark >= 60){
+    return 'D';
+  } else if(mark <= 50){
+    return 'F'
   }
-  
+
+  }
+ console.log(grade(84)); 
   
   
   
