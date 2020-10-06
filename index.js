@@ -19,7 +19,7 @@ Do the following:
 */
 const votingAge = 18;
 if(votingAge > 17)
-console.log('true');
+return 'true';
 
 
 /*
@@ -122,10 +122,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight, age) {
+    let dogFood;
 
+    if(age >= 0.166666666 && age < 0.333333333) {
+      dogFood = weight * .1;
+    }else if (age >= 0.333333333 && age < 0.583333333) {
+      dogFood = weight * .05;
+    }else if (age >= 0.583333333 && age <1) {
+      dogFood = weight * .04;
+    }else if (age >= 1) {
+      if (weight <= 5) {
+        dogFood = weight * .05; 
+      }else if (weight > 5 && weight <=10) {
+        dogFood = weight * .04;
+      }else if (weight > 10 && weight <= 15) {
+        dogFood = weight * .03;
+      }else if (weight > 15) {
+        dogFood = weight * .02;
+      }
+    }
+    return dogFood;
+  }
+console.log(dogFeeder(15, 1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
