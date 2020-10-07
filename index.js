@@ -33,11 +33,8 @@ Do the following:
 */
 
 let toddler = 'tantrum';
-let mother = 'calm-down';
+toddler = 'calm_after_nap';
 
-if(mother === 'calm-down') {
-  toddler = 'Ooosssaaa';
-}
 console.log(toddler);
 
 
@@ -51,11 +48,12 @@ Do the following:
 
    HINT: look up the Number method
 */
-var dogString = "1999"
-let dogNumber = Number(dogString);
-console.log(dogString);
-console.log(dogNumber);
-
+function stringToInt() {
+  var dogString = "1999";
+  let dogNumber = Number(dogString);
+  return dogNumber;
+}
+console.log(stringToInt);
 
 
 /*
@@ -252,7 +250,7 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 function annoyingSong(){
-  for(i = 10; i > 0; i--){
+  for(let i = 0; i > 5; i--){
     console.log(i + " bottles of soda on the wall," + i + " bottles of soda, take one down pass it around " + (i -1) + " bottles of soda on the wall");
   }
 
@@ -290,7 +288,7 @@ function grade(mark){
   }
 
   }
- console.log(grade(84)); 
+ console.log(grade(74)); 
   
   
   
@@ -307,10 +305,10 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
+// function vowelCounter(/*add your code here*/) {
     /*add your code here*/
-}
+
+//}
 
 
 
